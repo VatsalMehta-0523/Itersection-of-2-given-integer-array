@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void printArr( int arr[] , int n ) ;
+void printArr( int arr[] , int n ) ;                                                // function declaration
 void remove_dupplicates(int arr[] , int *n );
 
 
@@ -55,7 +55,7 @@ int main(){
         }
     }
 
-    remove_dupplicates( inter_array , &k );
+    remove_dupplicates( inter_array , &k );                       // function called by reference
 
     printArr(inter_array , k );
     printf("\n");
@@ -67,13 +67,13 @@ int main(){
 
 
 
-void printArr( int arr[] , int n ){  // function to print array
+void printArr( int arr[] , int n ){                           // function to print array
     for (int i = 0 ; i < n ; i++){
         printf("%d ", arr[i]);
     }
 }
 
-void remove_dupplicates(int arr[] , int *n ){  // function to remove duplicate elements from array
+void remove_dupplicates(int arr[] , int *n ){                // function to remove duplicate elements from array
     int j = 0 ;
     for ( int i = 0 ; i < *n ; i++ ){
         if ( arr[i] != arr[i+1] ){
@@ -81,5 +81,5 @@ void remove_dupplicates(int arr[] , int *n ){  // function to remove duplicate e
             arr[j++] = arr[i] ;
         }
     }
-    *n = j ;   // updating size of array .
+    *n = j ;                                                  // updating size of array .
 }
